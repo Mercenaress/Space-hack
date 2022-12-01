@@ -117,3 +117,30 @@
     font-size: 0.8rem;
     font-weight: 400;
 }
+
+@media screen and (min-width: 600px) {
+    .main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: min-content auto;
+    }
+
+    .main__slogan--black-purple {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .image-astronaut {
+        grid-column: span 4;
+        grid-row: span 2;
+    }
+
+    .main__slogan--damp-purple {
+        grid-column-start: 1 / span 2;
+        grid-row-start: 6;
+    }
+
+    .image-box--constellation {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
