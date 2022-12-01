@@ -1,11 +1,119 @@
-body {
-    background-color: blueviolet;
+@import url('https://fonts.googleapis.com/css2?family=Shanti&family=Share&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
 }
 
-div {
-    min-height: 300px;
-    min-width: 100px;
-    background-image: url(images/astronaut.jpg);
-    background-size: contain;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+:root {
+    /* Font variables */
+    --primary-font: 'Share';
+    --secondary-font: 'Shanti';
+
+    /* Color palette */
+    --black-color: black;
+    --black-purple-color: #2E2D31;
+    --damp-purple-color: #0E002C;
+    --dark-purple-color: #5D44AB;
+    --footer-purple-color: #654C8C;
+    --purple-rouge-color: #7654B4;
+    --light-purple-color: #967ECB;
+    --white-color: white;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.main__slogan--black-purple,
+.main__slogan--damp-purple {
+    color: var(--white-color);
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    grid-column: span 2;
+}
+
+.main__slogan--black-purple {
+    background-color: var(--black-purple-color);
+    padding: 3rem 0;
+}
+
+.image-box--planet {
+    background-color: var(--dark-purple-color);
+    padding: 3.2rem;
+}
+
+.image-box--astronaut {
+    background-color: var(--purple-rouge-color);
+    padding: 3.2rem;
+}
+
+.image-box--gun {
+    background-color: var(--light-purple-color);
+    padding: 3.2rem;
+}
+
+.image-box--ship {
+    background-color: var(--damp-purple-color);
+    padding: 3.2rem;
+}
+
+.image-astronaut {
+    width: 100%;
+    height: auto;
+    grid-column: span 2;
+}
+
+.image-box--station {
+    background-color: var(--purple-rouge-color);
+    padding: 3.2rem;
+}
+
+.image-box--space {
+    background-color: var(--dark-purple-color);
+    padding: 3.2rem;
+}
+
+.main__slogan--damp-purple {
+    background-color: var(--damp-purple-color);
+    padding: 6rem 0;
+}
+
+.image-box--constellation {
+    background-color: var(--black-purple-color);
+    grid-column: span 2;
+    padding: 7.5rem;
+}
+
+.footer {
+    background-color: var(--footer-purple-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3.2rem;
+    gap: 3.5rem 2rem;
+}
+
+.footer__text--bold {
+    color: var(--black-color);
+    font-family: var(--primary-font);
+    font-size: 1.25rem;
+    font-weight: 700;
+    grid-column: span 2;
+}
+
+.footer__title {
+    color: var(--black-color);
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.footer__text {
+    color: var(--black-color);
+    font-family: var(--secondary-font);
+    font-size: 0.8rem;
+    font-weight: 400;
 }
